@@ -1,0 +1,118 @@
+@use './variables';
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+  color: variables.$default-color;
+  background-color: variables.$background-color;
+  font-family: variables.$default-font;
+}
+
+a {
+  color: variables.$accent-color;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, variables.$accent-color, transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: variables.$heading-color;
+  font-family: variables.$heading-font;
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+.section {
+  color: variables.$default-color;
+  padding: 60px 0;
+  scroll-margin-top: 92px;
+  overflow: clip;
+	border-bottom: 2px solid variables.$nav-background-color;
+}
+
+@media (max-width: 1199px) {
+  .section {
+    scroll-margin-top: 76px;
+  }
+}
+
+.h3 {
+	font-size: 32px;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	position: relative;
+	font-weight: 700;
+}
+.h4 {
+	font-size: 28px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	position: relative;
+	font-weight: 700;
+}
+
+.header-line {
+	&:after {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 64px;
+		height: 3px;
+		background: variables.$accent-color;
+		left: 0;
+		bottom: 0;
+		margin: auto;
+	}
+}
+
+.sub-header {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.text-h1 {
+	line-height: 18px;
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: color-mix(in srgb, variables.$default-color, transparent 20%);
+	margin-bottom: 10px;
+}
+.text-h2 {
+	line-height: 18px;
+	font-size: 18px;
+	font-style: italic;
+}
+.text-h3 {
+	font-size: 18px;
+	font-weight: 600;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.badge {
+	background: variables.$accent-color;
+	margin-right: 10px;
+	font-weight: 500;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.loader {
+	margin-top: 10rem;
+	.spinner-border {
+		width: 5rem;
+  	height: 5rem;
+	}
+}
